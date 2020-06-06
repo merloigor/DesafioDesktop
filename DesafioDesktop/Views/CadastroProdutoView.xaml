@@ -1,0 +1,20 @@
+﻿<Window x:Class="DesafioDesktop.Views.CadastroProdutoView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DesafioDesktop.Views"
+        mc:Ignorable="d"
+        Title="Cadastro de Produtos" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" MinHeight="179" MinWidth="402" Height="179" Width="402">
+    <Grid>
+        <Label Content="Nome:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Preço:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+        <Label Content="Estoque:" HorizontalAlignment="Left" Margin="11,72,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Name="txtEstoque" Margin="66,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+        <TextBox HorizontalAlignment="Left" Name="txtPreco" Margin="66,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+        <TextBox HorizontalAlignment="Left" Name="txtNome" Margin="66,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="326"/>
+        <Button Content="Salvar" Name="BtnSalvar" HorizontalAlignment="Left" Margin="150,0,0,10" VerticalAlignment="Bottom" Width="49" Click="BtnSalvar_Click"/>
+        <Button Content="Cancelar" Name="BtnCancelar" HorizontalAlignment="Left" Margin="204,0,0,10" VerticalAlignment="Bottom" Width="49"/>
+
+    </Grid>
+</Window>
