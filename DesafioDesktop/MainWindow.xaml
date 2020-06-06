@@ -10,9 +10,8 @@
         <DataGrid x:Name="dgProdutos" Margin="10,43,10,10" SelectionMode="Single" AutoGenerateColumns="False" ItemsSource="{Binding ProdutosList}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nome" Width="*" Binding="{Binding Nome}"/>
-                <DataGridTextColumn Header="Preço" Width="80" Binding="{Binding Preco}"/>
-                <DataGridTextColumn Header="Estoque" Width="80" Binding="{Binding Quantidade}"/>
-                <DataGridTextColumn Header="Sincronizado" Width="80" Binding="{Binding Sincronizado}"/>
+                <DataGridTextColumn Header="Preço" Width="80" Binding="{Binding Preco, StringFormat='{}{0:c}', ConverterCulture='pt-BR'}"/>
+                <DataGridTextColumn Header="Estoque" Width="80" Binding="{Binding Estoque}"/>
             </DataGrid.Columns>
         </DataGrid>
         <Button Content="Novo" Name="BtnNovo" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="28" Width="50" Click="BtnNovo_Click"/>

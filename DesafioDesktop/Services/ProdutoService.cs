@@ -60,6 +60,13 @@ namespace DesafioDesktop.Services
         public async Task<long> ObterId()
         {
             long id = await context.Produtos.MinAsync(x => x.Id);
+
+            if (id > 0)
+            {
+                id = -1;
+                return id;
+            }
+
             return id - 1;
         }
 
