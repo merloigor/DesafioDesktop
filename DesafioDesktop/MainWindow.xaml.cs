@@ -60,7 +60,10 @@ namespace DesafioDesktop
         {
             try
             {
-                CadastroProdutoView cadProd = new CadastroProdutoView();
+                CadastroProdutoView cadProd = new CadastroProdutoView
+                {
+                    Owner = this
+                };
                 cadProd.Show();
             }
             catch (Exception ex)
@@ -77,7 +80,10 @@ namespace DesafioDesktop
                 if (dgProdutos.SelectedItem != null)
                 {
                     Produto produto = (Produto)dgProdutos.SelectedItem;
-                    CadastroProdutoView cadProd = new CadastroProdutoView(produto);
+                    CadastroProdutoView cadProd = new CadastroProdutoView(produto)
+                    {
+                        Owner = this
+                    };
                     cadProd.Show();
                 }
             }
@@ -131,7 +137,7 @@ namespace DesafioDesktop
             await produtoService.SincronizacaoProdutos();
         }
 
-        private async Task AtualizarGrid()
+        public async Task AtualizarGrid()
         {
             produtosLocal = new ObservableCollection<Produto>(await produtoService.ObterTodosProdutos());
             dgProdutos.ItemsSource = null;

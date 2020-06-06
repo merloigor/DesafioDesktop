@@ -49,6 +49,8 @@ namespace DesafioDesktop.Views
                 if (ValidarCampos())
                 {
                     SalvarProduto();
+
+
                 }
             }
             catch (Exception ex)
@@ -82,6 +84,7 @@ namespace DesafioDesktop.Views
                 await produtoService.AtualizarProdutos(produtoEdit);
             }
 
+            await (Owner as MainWindow).AtualizarGrid();
             MessageBox.Show($"Produto salvo");
         }
 
